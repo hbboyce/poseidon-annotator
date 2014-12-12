@@ -1,0 +1,8 @@
+MySQL-python==1.2.5
+SQLAlchemy==0.9.8
+argparse==1.2.1
+cruzdb==0.5.6
+mwparserfromhell==0.3.3
+six==1.8.0
+wikitools==1.2
+wsgiref==0.1.2
