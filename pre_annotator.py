@@ -14,7 +14,6 @@ if not os.path.exists(directory):
     os.makedirs(directory)
 
 print "Saving local version of hg19"
-#Genome('hg19').mirror(["refGene", "cpgIslandExt", "chromInfo", "knownGene", "kgXref"], "sqlite:///db/hg19.db")
 Genome('hg19').mirror(["refGene"], "sqlite:///db/hg19.db")
 
 print "Saving list of SNPs in SNPedia"
