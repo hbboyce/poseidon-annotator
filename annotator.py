@@ -253,7 +253,7 @@ def vcf_parser(vcf_file, g, unique_genes, snp_output, site, sex, v):
             if v.FILTER != "PASS" or v.GENOTYPE == "(unknown)":
                 continue
 
-            if v.CHROM.lower() == "y":
+            if v.CHROM.lower() == "chry":
                 sex = "Male"
 
             # for non-SNPs find the gene and add it to the list
