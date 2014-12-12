@@ -221,7 +221,8 @@ def snp_search(variant, site, snp_output):
         pos = str(variant.CHROM) + ":" + str(variant.POS)
         try:
             # ignore common snps
-            if data["summary"].lower().startswith("common"):
+            check = data["summary"].lower()
+            if check.startswith("common") or check.startswith("normal"):
                 return
             snp_output[variant.ID].append(("Position", pos))
             snp_output[variant.ID].append(("Genotype",variant.GENOTYPE))
