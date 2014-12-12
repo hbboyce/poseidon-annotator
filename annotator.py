@@ -233,7 +233,7 @@ def snp_search(variant, site, snp_output):
             snp_output.pop(variant.ID, None)
 
 
-def vcf_parser(vcf_file, g, unique_genes, snp_output, site, sex, v):
+def vcf_parser(vcf_file, g, unique_genes, snp_output, site, sex, verbose):
     """
     Parse the passed in vcf file
     """
@@ -242,7 +242,7 @@ def vcf_parser(vcf_file, g, unique_genes, snp_output, site, sex, v):
         for index, line in enumerate(vcf):
             if line.startswith("#"):    # ignore header info
                 continue
-            if v:
+            if verbose:
                 if index % 10000 == 0:
                     print "%d variants complete" % index
 
